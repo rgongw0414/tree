@@ -1,3 +1,6 @@
+#ifndef TREE_H
+#define TREE_H
+
 #include <bits/stdc++.h>
 using namespace std;
 #define endl '\n'
@@ -23,8 +26,8 @@ class Tree{
         void BST_build(vector<T> &data);
         void traversal();
         void traversal(void (*func)(Node<T>* node));
-        void printTree(vector<T> tree);
-        int get_depth(Node<T>* node);
+        static void printTree(vector<T> tree);
+        static int get_depth(Node<T>* node);
         int nodeNum(Node<T>* node);
         void insert(T value);
         void remove(T value);
@@ -152,7 +155,7 @@ template<class T>
 void PRINT(Node<T>* node){
     cout << node->value << " ";
 }
-
+/*
 int main(){
     vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8};
     Tree<int>* tree = new Tree<int>();
@@ -160,4 +163,6 @@ int main(){
     tree->traversal();
     cout << tree->nodeNum(tree->root) << endl;
     return 0;
-}
+}*/
+
+#endif
