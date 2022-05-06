@@ -8,10 +8,11 @@ using namespace std;
 template <class T>
 class Node{
     public:
-        Node():left(NULL), right(NULL), parent(NULL), value(0){}
-        Node(T Value):left(NULL), right(NULL), parent(NULL), value(Value){}
+        Node():left(NULL), right(NULL), parent(NULL), value(0), size(0){}
+        Node(T Value):left(NULL), right(NULL), parent(NULL), value(Value), size(0){}
         Node* left, *right, *parent;
         T value;
+        int size;
 };
 
 template <class T>
